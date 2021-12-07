@@ -23,7 +23,7 @@ export class AuthentificationController extends CrudController {
         Database.modifyUser(req.body).then((value: any) => {
             if (value.succeded)
                 res.status(200).json(value)
-            else 
+            else
                 res.status(401).json('Error updating user or user not found')
         }).catch((err) => {
             res.status(401).json("It didn't work!");
@@ -34,7 +34,7 @@ export class AuthentificationController extends CrudController {
         Database.updateUserImage(req.body).then((value: any) => {
             if (value.succeded)
                 res.status(200).json(value)
-            else 
+            else
                 res.status(401).json('Error updating user or user not found')
         }).catch((err) => {
             res.status(401).json("It didn't work!");

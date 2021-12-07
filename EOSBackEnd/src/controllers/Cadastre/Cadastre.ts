@@ -12,6 +12,7 @@ export class CadastreController extends CrudController {
         throw new Error("Method not implemented.");
     }
 
+    // get all cadastres near a position
     public read(req: Request<import("express-serve-static-core").ParamsDictionary, any, any, IRequest>, res: Response): void {
         const pos: [number, number] = [+req.query.longitude, +req.query.latitude]
         Database.getCadastreNear(pos).then((value) => {

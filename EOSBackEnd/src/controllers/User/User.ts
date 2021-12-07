@@ -7,6 +7,7 @@ export class UserController extends CrudController {
         throw new Error("Method not implemented.");
     }
 
+    // get all users
     public read(req: Request<import("express-serve-static-core").ParamsDictionary>, res: Response): void {
         Database.getUsers().then((value) => {
             res.status(200).json(value);

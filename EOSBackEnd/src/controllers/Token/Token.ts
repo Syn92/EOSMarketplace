@@ -20,6 +20,7 @@ export class TokenController extends CrudController {
         throw new Error("Method not implemented.");
     }
 
+    // set device token, usefull for sending push notifications
     public update(req: Request<import("express-serve-static-core").ParamsDictionary, any, IUpdateRequest, any>, res: Response): void {
         Database.setRegistrationToken(req.body.userId, req.body.token).then(() => {
             res.status(200);
@@ -29,6 +30,7 @@ export class TokenController extends CrudController {
         });
     }
 
+    // delete a device token based on user id
     public delete(req: Request<import("express-serve-static-core").ParamsDictionary, any, IDeleteRequest, any>, res: Response): void {
         Database.setRegistrationToken(req.body.userId, '').then(() => {
             res.status(200);

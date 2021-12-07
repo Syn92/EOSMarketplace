@@ -11,6 +11,7 @@ export class AddressController extends CrudController {
         throw new Error("Method not implemented.");
     }
 
+    // get addresses for autocomplete based on query received
     public read(req: Request<import("express-serve-static-core").ParamsDictionary, any, any, IRequest>, res: Response): void {
         const address: string = req.query.address
         Database.getAddressAutocomplete(address).then((value) => {

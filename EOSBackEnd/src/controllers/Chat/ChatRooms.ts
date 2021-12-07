@@ -11,6 +11,7 @@ export class ChatRoomsController extends CrudController {
         throw new Error("Method not implemented.");
     }
 
+    // get all chat rooms for a user
     public read(req: Request<import("express-serve-static-core").ParamsDictionary, any, any, IRequest>, res: Response): void {
         Database.getChatRooms(req.query.userId).then((value) => {
             res.status(200).json(value);

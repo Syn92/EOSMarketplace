@@ -1,5 +1,6 @@
-import { Api, JsonRpc, RpcError } from 'eosjs';
-import { JsSignatureProvider } from 'eosjs/dist/eosjs-jssig';  
+import { Api, JsonRpc } from 'eosjs';
+import { JsSignatureProvider } from 'eosjs/dist/eosjs-jssig';
+// @ts-ignore
 import fetch from "node-fetch";
 import { ContractRequest } from '../models/Annonce';
 const CHAIN_ENDPOINT = "https://jungle3.cryptolions.io:443"
@@ -15,6 +16,8 @@ export class ContractAPI{
         this.api = new Api({ rpc, signatureProvider, textDecoder: new TextDecoder(), textEncoder: new TextEncoder() });
         console.log("Contract API instantiated!")
     }
+
+    // create a small contract
     static async createDeal(contractRequest:ContractRequest):Promise<string>{
       return new Promise<string>((resolve,reject)=>{
         ContractAPI.api.transact({
@@ -39,8 +42,8 @@ export class ContractAPI{
           }, {
             blocksBehind: 3,
             expireSeconds: 30
-  
-        }).then((res)=>{
+
+        }).then((res: any)=>{
           resolve(res.processed.action_traces[0].inline_traces[res.processed.action_traces[0].inline_traces.length-1].act.data.deal_id)
         })
       })

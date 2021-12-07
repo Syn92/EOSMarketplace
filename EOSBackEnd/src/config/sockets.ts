@@ -5,7 +5,6 @@ import { Database } from "./database";
 import { Notifications } from "./notifications";
 
 export class Sockets {
-
     private static io: Server;
     private static users: Map<string, Socket>;
     private static chatSocket: Namespace;
@@ -17,6 +16,7 @@ export class Sockets {
         Sockets.setUp();
     }
 
+    // send a message to all users in a room
     public static newMessage(message: IMessageReceived) {
         Database.addChatMessage(message).then((newId) => {
             const newMessage: IMessageSent = {...message, _id: newId};
@@ -27,6 +27,7 @@ export class Sockets {
         })
     }
 
+    // creates a new room, send it to users in it and make them listen to messages in that new room
     public static async newRoom(req: IChatRoomReceived) {
         Database.addChatRoom(req.room).then(async (newId) => {
             const buyerSocket = Sockets.users.get(req.room.buyerId);
@@ -53,10 +54,12 @@ export class Sockets {
         }).catch(err => { console.log(err); })
     }
 
+    // send new request status to all users, because other users need to update it to expired
     public static newRequestStatus(req: RequestStatus) {
-        Sockets.chatSocket.to(req.roomId).emit('newRequestStatus', req)
+        Sockets.chatSocket.emit('newRequestStatus', req)
     }
 
+    // send new contract request to users in the room involved
     public static newContractRequest(req: ContractRequest) {
         Sockets.chatSocket.to(req.roomId).emit('newContractRequest', req)
     }
@@ -91,7 +94,20 @@ export class Sockets {
                     }
                 })
             })
+
+            socket.on('contractUpdated', Sockets.contractUpdate)
+            socket.on('contractDeleted', Sockets.contractDeleted)
         });
+    }
+
+    // send contract status updated
+    public static contractUpdate(id: string) {
+        Sockets.chatSocket.to(id).emit('contractUpdated')
+    }
+
+    // send contract has been deleted
+    public static contractDeleted(id: string) {
+        Sockets.chatSocket.to(id).emit('contractDeleted')
     }
 
 }

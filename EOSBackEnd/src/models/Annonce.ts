@@ -1,5 +1,3 @@
-//import { Binary } from "bson";
-
 export interface Service {
     title: string;
     description: string;
@@ -41,17 +39,15 @@ export interface ContractRequest {
     sellerWalletAccount?:string,
 }
 
-export interface RequestStatus {
-    contractId: string,
-    roomId: string,
-    accepted: boolean
+export enum ServiceStatus {
+    OPEN = 'open',
+    IN_PROGRESS = 'inProgress',
+    COMPLETED = 'completed'
 }
 
-/*
-'serviceType': selectedServType,
-      'category': selectedCat,
-      'price': price,
-      'description': description,
-      'material': material,
-      'images': image,
-      'positon': position, */
+export interface RequestStatus {
+    roomId: string,
+    status: ServiceStatus,
+    serviceId: string | null,
+    otherUser: string | null,
+}

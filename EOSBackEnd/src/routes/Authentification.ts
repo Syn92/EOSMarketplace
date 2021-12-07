@@ -21,12 +21,10 @@ router.post('/avatar', (req: Request, res: Response) => {
     authentificationController.updateAvatar(req, res);
 });
 
-
 // Add a rating with { uid: string, rating: number }
 router.post('/rating', (req: Request, res: Response) => {
     authentificationController.addRating(req, res);
 });
-
 
 router.delete('/', (req: Request, res: Response) => {
     authentificationController.delete(req, res);

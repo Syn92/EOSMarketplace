@@ -5,7 +5,6 @@ import { router as addressRouter } from './Address';
 import { router as chatRoomsRouter } from './ChatRooms';
 import { router as chatMessagesRouter } from './ChatMessages';
 import { router as tokenRouter } from './Token';
-import { router as contractRouter} from "./Contract"
 import { router as userRouter } from './User';
 
 export {
@@ -16,6 +15,5 @@ export {
     chatRoomsRouter,
     chatMessagesRouter,
     tokenRouter,
-    contractRouter,
     userRouter
 };
