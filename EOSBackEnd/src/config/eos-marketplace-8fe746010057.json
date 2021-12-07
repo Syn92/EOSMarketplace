@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "eos-marketplace",
+  "private_key_id": "8fe746010057a1e7c4264b405d5893ed75461d96",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCoQLcTtIyUtAAk\n8H/M7HsIC+MDQGdiQ1tNV/b92xwKcI7jWQb/JzXso7tvCk4MTIqlK5VIac5Ibg7s\nTx0/rdrQn8QvxkqbOP3TiQlnkFcTFcEpJHBJ+Tnf66+zhhgd7sgGxdXD3/mu7DCy\nB9BrpxTuFQ77M3KAFzzef3yac8ZKJCQn8NVsffmedNgbXYhOQ9kNvMjNMcn85hgE\nggHhQkF0JC3LSvfsgxrMameeIcL5mxEDX1orDqZzjTdLnybdGFNZXavtuw04gB8n\nDrek7d+HL8IfWlOdbmsJPGCGMqcXBFtWLtkdC6g6ok+H1UsIS+y+EkFcAONN8cYC\n/eYGPys1AgMBAAECggEAAn9ID3JW3whAHi/K1Vo1gntede+IaUh5z6EI9krdCfxL\nTNgHD+sGmA8fRyHS4h2R7uQlSkMZwZsrdXnrA6G+6rBEzVqcRCQECt0tPFy8fMcc\naIO4obVTf32O4axRd+1f7UEj7+JyGf9y7XZnZQkyVWmAxKtqANWiIEh/K1x2lwns\n1IWssObWlJZwmktz8uiVoF45egv6yNhTZRLoX2J1a+GYS1JziaVN07/rsZ+nWlll\neNDYIsODBCCh88OcaJZfYf3h/jeRfEmJWbHNhPke6JVbs1mUCgXbfYZGCgwMO7pY\nsyhU27sYnQb4AD9pynl9irORkWbe7rt0s++ifLXWeQKBgQDeOpkYIoqFS6twfSFr\ngF0wY7RP8bAnztMiybWgUaB1N/8aG9/o7aAEb9KT46z2P2omaYhLdMJQztVbifGI\nRa2xrh2iYKzM4+uRevM5rQ89C7OhKN8DtoYBT/WMgBc07kGvbujpBwHISeCs8tYW\neAbMhDgvG3AUWyqsUVxQ1wK0bQKBgQDB0kby85bCTBlxme+i+IdH9oVK5YTZy4aL\nFvCkTeMavkHKiK/llYPmwxF2m27cvK8pUKgkgZfCRCfJZ5Bne2w/a0yOqvZdb5Zw\nnfqywnFGe0S583KL51+tRPsssRjV13VsYR7Kv5YkmYKpCfZEzQzwRosf97VXANQ/\nXYNDbsxE6QKBgQCFpS3uws8VbLV0l/wiP3dLo5qLvWjX990n/bCZ8p0SAZQMKplU\n5psmL+2u/OxGx0paQXszDcvSdyD+xQ2Zi3Xy9ihiP8uMCMHhotRlajtQ1hm4IPFF\ntV4Pqfuc/Gd4cJTWIVg20/zxa+SPfhbcOmC0XAvB4LldtJoMOX3QLA43XQKBgA4R\nik7WOYou5eXmC4vjyEYD8dbm5Aa/DCwKZTs34BUv3CysUUAz4xgb7qeSTrC9DWXN\nUfccZPyX399xofyw68GKs0rjw/AySlQwU2MoU/qOtgVdU2IuUDaOfEDZNflHo2FT\nh12mHGrZra9BZtvFmnvSUwTmAQaoq79RtVZus2sJAoGAXzNJXpWoqnCEl94OHbUt\nyGzbICnQH8Xv99RAsWnAl0xmh8+/PcLw4opQh6n3g3MlMDw//EIlVs3fAvydy4Ig\noGS7pEfqlEdcPfBE/4s9pX+doe29VM5d/PztdN5rP9zsqBWkWyJWc50UiWu1OZb1\npuTpkIG2O7gH1V3rlw/1Sug=\n-----END PRIVATE KEY-----\n",
+  "client_email": "eos-marketplace@appspot.gserviceaccount.com",
+  "client_id": "104802954142521780776",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/eos-marketplace%40appspot.gserviceaccount.com"
+}
